@@ -159,9 +159,9 @@ export default function CardCar(props: CardCarProps) {
 
 
     return (
-        <div className="flex mt-4 shadow-md">
+        <div className="flex mt-4 shadow-md hover:shadow-xl">
             <div className="">
-                <img src={vehicle.urlImg} alt={vehicle.vehicleName} width={400} />
+                <img src={vehicle.urlImg} alt={vehicle.vehicleName} style={{ width: '400px', height: '250px' }} />
             </div>
             <div>
                 <div className="flex flex-col ml-3">

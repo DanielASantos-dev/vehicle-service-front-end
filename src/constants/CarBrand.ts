@@ -24,7 +24,14 @@ export const CarBrand = {
     JAGUAR: "Jaguar",
     ALFA_ROMEO: "Alfa Romeo",
     MITSUBISHI: "Mitsubishi",
+    FERRARI: "Ferrari",
+    LAMBORGHINI: "Lamborghini",
+    LANCIA: "Lancia",
+    BUGATTI: "Bugatti",
+    PONTIAC: "Pontiac",
+    ROLLS_ROYCE: "Rolls-Royce"
 };
+
 
 const carBrandEntries = Object.entries(CarBrand).map(([key, value]) => ({ key, value }));
 export const sortedCarBrandEntries = carBrandEntries.sort((a, b) => a.value.localeCompare(b.value));

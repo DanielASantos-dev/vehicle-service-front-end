@@ -3,11 +3,20 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { QueryClient, QueryClientProvider } from 'react-query'
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
+const client = new QueryClient()
 root.render(
   <React.StrictMode>
-    <App />
+    <QueryClientProvider client={client}>
+      <Router>
+        <App />
+      </Router>
+    </QueryClientProvider>
+
   </React.StrictMode>
 );
 

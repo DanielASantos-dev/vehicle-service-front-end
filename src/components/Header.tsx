@@ -6,12 +6,8 @@ import { getCarBrandNameByKey } from "../constants/CarBrand";
 
 export default function Header() {
 
-    const params = {
-
-    };
-
-    const { data, isLoading, error } = useQuery(['findVehicle', params], () =>
-        fetchFindVehicle(params)
+    const { data, isLoading, error } = useQuery(['findVehicleHeader'], () =>
+        fetchFindVehicle({})
             .then(response => {
                 console.log("Dados recebidos:", response);
                 return response;

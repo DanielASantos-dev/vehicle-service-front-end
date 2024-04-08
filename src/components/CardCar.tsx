@@ -7,6 +7,7 @@ import { useQueryClient } from 'react-query';
 import { sortedCarBrandEntries } from "../constants/CarBrand"
 import SelectBox from "./SelectBox"
 import YearSelect from "./YearSelect"
+import { formatDate, getDateNDaysBefore } from "../functions/utils"
 
 
 interface CardCarProps {
@@ -26,8 +27,8 @@ export default function CardCar(props: CardCarProps) {
     const [isOpenAction, setIsOpenAction] = useState(false)
     const [actionFunctionModal, setActionFunctionModal] = useState("")
 
-    const ALERT_DELETE_CARD = `Você realmente deseja deletar o veículo  ${1}`
-    const ALERT_UPDATE_CARD = `Você realmente deseja atualizar o veículo ${2}`
+    const ALERT_DELETE_CARD = `Você realmente deseja deletar o veículo  ${vehicle.vehicleName}`
+    const ALERT_UPDATE_CARD = `Você realmente deseja atualizar o veículo ${vehicle.vehicleName}`
 
     const [modalTitle, setModalTitle] = useState("");
     const [modalIcon, setModalIcon] = useState<ReactElement | null>(<CheckCircleIcon className="h-6 w-6 text-green-500" />);
@@ -72,8 +73,12 @@ export default function CardCar(props: CardCarProps) {
     };
 
     const params = {
-        startTime: "2024-04-07",
-        endTime: "2024-04-07",
+        startTime: formatDate(getDateNDaysBefore(7)),
+        endTime: formatDate(new Date()),
+    };
+
+    const paramsAll = {
+
     };
 
     async function handleUpdateVehicle() {
@@ -91,7 +96,8 @@ export default function CardCar(props: CardCarProps) {
 
         if (response?.success) {
             isSuccess(response.message!)
-            queryClient.invalidateQueries(['findVehicle', params]);
+            queryClient.invalidateQueries(['findVehicle']);
+            queryClient.invalidateQueries(['findVehicleHeader']);
         } else {
             isError(response?.error?.message!)
         }
@@ -105,8 +111,8 @@ export default function CardCar(props: CardCarProps) {
 
         if (response?.success) {
             isSuccess(response.message!)
-
             queryClient.invalidateQueries(['findVehicle', params]);
+            queryClient.invalidateQueries(['findVehicleHeader', params]);
         } else {
             isError(response?.error?.message!)
         }
@@ -194,6 +200,7 @@ export default function CardCar(props: CardCarProps) {
                 </div>
             </div>
             {showModalAction()}
+            {showModalInfo()}
         </div>
     )
 }

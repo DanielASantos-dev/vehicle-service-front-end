@@ -161,7 +161,7 @@ export default function CardCar(props: CardCarProps) {
     return (
         <div className="flex mt-4 shadow-md">
             <div className="">
-                <img src="./ka.jpg" alt="Ka" width={400} />
+                <img src={vehicle.urlImg} alt={vehicle.vehicleName} width={400} />
             </div>
             <div>
                 <div className="flex flex-col ml-3">

@@ -111,8 +111,8 @@ export default function CardCar(props: CardCarProps) {
 
         if (response?.success) {
             isSuccess(response.message!)
-            queryClient.invalidateQueries(['findVehicle', params]);
-            queryClient.invalidateQueries(['findVehicleHeader', params]);
+            queryClient.invalidateQueries(['findVehicle']);
+            queryClient.invalidateQueries(['findVehicleHeader']);
         } else {
             isError(response?.error?.message!)
         }

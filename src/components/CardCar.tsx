@@ -166,8 +166,8 @@ export default function CardCar(props: CardCarProps) {
             <div>
                 <div className="flex flex-col ml-3">
                     <SelectBox fields={sortedCarBrandEntries} onChange={handleBrandChange} selectItem={vehicle.brand} />
-                    <input onChange={(e) => setVehicleName(e.target.value)} disabled={disabled} className={`mt-2 ${disabled ? "bg-slate-200" : "bg-slate-100"}`} title={vehicleName} type="text" value={vehicleName} />
-                    <input onChange={(e) => setDescription(e.target.value)} disabled={disabled} className={`mb-2 mt-2 ${disabled ? "bg-slate-200" : "bg-slate-100"}`} title={description} type="text" value={description} />
+                    <input onChange={(e) => setVehicleName(e.target.value)} disabled={disabled} className={`mt-2 ${disabled ? "bg-slate-200" : "bg-slate-100"} w-auto`} title={vehicleName} type="text" value={vehicleName} />
+                    <input onChange={(e) => setDescription(e.target.value)} disabled={disabled} className={`mb-2 mt-2 ${disabled ? "bg-slate-200" : "bg-slate-100"} w-[450px]`} title={description} type="text" value={description} />
                     <YearSelect selectItem={vehicle.year} startYear={1990} endYear={new Date().getFullYear()} onChange={handleYearChange} />
                     <div>
                         <label htmlFor="Vendidos"> Vendido:</label>

@@ -63,7 +63,7 @@ export default function SidBar() {
 
 
     return (
-        <div className={`p-8 h-screen`}>
+        <div className={`p-3 h-screen`}>
             <div className='flex flex-col'>
                 <Link to={"/"} className="px-4 py-1 text-gray-500 rounded-md font-semibold mb-2">Home</Link>
                 <Link to={"/register"} className="px-4 py-1 bg-slate-700 rounded-md font-semibold">Cadastrar veículo</Link>

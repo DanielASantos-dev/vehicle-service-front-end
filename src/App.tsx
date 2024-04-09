@@ -1,6 +1,7 @@
 import Body from "./components/Body";
 import Header from "./components/Header";
 import SidBar from "./components/SidBar";
+import SidBarRight from "./components/SidBarRight";
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
           <Body />
         </div>
       </div>
+      <SidBarRight />
+
     </div>
   );
 }

@@ -106,7 +106,7 @@ export default function RegisterCard() {
                 </div>
                 <div>
                     <label className="flex flex-col mr-2 mt-4 text-[0.8rem]" htmlFor={year}>Ano</label>
-                    <YearSelect selectItem={2024} startYear={1990} endYear={new Date().getFullYear()} onChange={handleYearChange} />
+                    <YearSelect selectItem={2024} startYear={1950} endYear={new Date().getFullYear()} onChange={handleYearChange} />
                 </div>
                 <div className=" mt-4">
                     <label htmlFor="Vendidos"> Vendido:</label>

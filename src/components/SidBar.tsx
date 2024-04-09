@@ -82,7 +82,7 @@ export default function SidBar() {
             <form className='' onSubmit={search}>
                 <div>
                     <h1 className="text-gray-500 font-semibold  mt-1">Ano</h1>
-                    <YearSelect startYear={1990} endYear={new Date().getFullYear()} onChange={handleYearChange} />
+                    <YearSelect startYear={1950} endYear={new Date().getFullYear()} onChange={handleYearChange} />
                 </div>
                 <div>
                     <h1 className="text-gray-500 font-semibold mt-2">Marca</h1>

@@ -1,8 +1,5 @@
-import React, { useState } from 'react';
-import { CarBrand, getCarBrandNameByKey, sortedCarBrandEntries } from "../constants/CarBrand";
-import SelectBox from "./SelectBox";
-import YearSelect from "./YearSelect";
-import { Link, useNavigate } from 'react-router-dom';
+import React from 'react';
+import { getCarBrandNameByKey } from "../constants/CarBrand";
 import { fetchFindVehicle } from '../services/api';
 import { useQuery } from 'react-query';
 import { Vehicle } from '../types/findAllVehicleResponse';

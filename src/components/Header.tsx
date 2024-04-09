@@ -1,8 +1,6 @@
-import { Vehicle } from "../types/findAllVehicleResponse";
 import { fetchFindVehicle } from "../services/api";
 import CardInfo from "./CardInfo";
 import { useQuery } from "react-query";
-import { getCarBrandNameByKey } from "../constants/CarBrand";
 
 export default function Header() {
 

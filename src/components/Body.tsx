@@ -1,5 +1,4 @@
-import CardCar from "./CardCar";
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Home from "./Home";
 import RegisterCard from "./RegisterCard";
 import SearchCar from "./SearchCar";

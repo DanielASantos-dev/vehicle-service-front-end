@@ -98,6 +98,7 @@ export default function CardCar(props: CardCarProps) {
             isSuccess(response.message!)
             queryClient.invalidateQueries(['findVehicle']);
             queryClient.invalidateQueries(['findVehicleHeader']);
+            setDisabled(true)
         } else {
             isError(response?.error?.message!)
         }
@@ -113,6 +114,7 @@ export default function CardCar(props: CardCarProps) {
             isSuccess(response.message!)
             queryClient.invalidateQueries(['findVehicle']);
             queryClient.invalidateQueries(['findVehicleHeader']);
+
         } else {
             isError(response?.error?.message!)
         }

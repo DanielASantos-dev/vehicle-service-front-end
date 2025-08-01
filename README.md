@@ -1,6 +1,4 @@
-# Api de Teste Tinnova Front Endd
-
-Aplicação desenvolvida com React para teste da api de teste Tinnova.
+Aplicação desenvolvida com React.
 
 ## Índice
 
